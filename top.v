@@ -33,7 +33,7 @@ module top(
 );
  
  
-   
+  
    reg [3:0] LED_cnt;
    reg [1:0]LED_state;
    
