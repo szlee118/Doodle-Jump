@@ -1,0 +1,109 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Wed Jan  9 12:17:19 2019
+| Host         : DESKTOP-69R1P6B running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    39 |
+| Unused register locations in slices containing registers |   150 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            2 |
+|      4 |            1 |
+|      8 |            1 |
+|     10 |            1 |
+|     12 |            1 |
+|     14 |            2 |
+|    16+ |           31 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             128 |           29 |
+| No           | No                    | Yes                    |             270 |           50 |
+| No           | Yes                   | No                     |             456 |           93 |
+| Yes          | No                    | No                     |              60 |           19 |
+| Yes          | No                    | Yes                    |             106 |           22 |
+| Yes          | Yes                   | No                     |             262 |           66 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------+--------------------------------------------------------+-------------------------------+------------------+----------------+
+|        Clock Signal        |                      Enable Signal                     |        Set/Reset Signal       | Slice Load Count | Bel Load Count |
++----------------------------+--------------------------------------------------------+-------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG             | key_decoder/inst/inst/Ps2Interface_i/ps2_clk_s1        | rst_IBUF                      |                1 |              2 |
+|  clk_IBUF_BUFG             | key_decoder/inst/inst/Ps2Interface_i/ps2_data_s1       | rst_IBUF                      |                1 |              2 |
+|  clk_25MHz_BUFG            |                                                        | rst_IBUF                      |                2 |              4 |
+|  clk_IBUF_BUFG             | key_decoder/inst/inst/Ps2Interface_i/bits_count        | rst_IBUF                      |                2 |              8 |
+|  clk22_BUFG                |                                                        | move_c/spd_y[3]_i_1_n_0       |                2 |             10 |
+|  clk23_BUFG                |                                                        | score[12]_i_1_n_0             |                3 |             12 |
+|  seven/clk_divider_reg[15] |                                                        | rst_IBUF                      |                3 |             14 |
+|  clk22_BUFG                |                                                        |                               |                6 |             14 |
+|  clk23_BUFG                |                                                        | score1                        |                1 |             16 |
+|  clk_IBUF_BUFG             | key_decoder/inst/inst/Ps2Interface_i/rx_finish         | rst_IBUF                      |                2 |             16 |
+|  clk_IBUF_BUFG             | key_decoder/inst/inst/Ps2Interface_i/rx_valid          | rst_IBUF                      |                2 |             16 |
+|  clk22_BUFG                | p/r7_reg[8]_0[0]                                       | rst_IBUF                      |                6 |             18 |
+|  clk22_BUFG                | p/E[0]                                                 | rst_IBUF                      |                3 |             18 |
+|  clk22_BUFG                | p/r6_reg[8]_0[0]                                       | rst_IBUF                      |                6 |             18 |
+|  clk22_BUFG                | p/r4_reg[8]_0[0]                                       | rst_IBUF                      |                5 |             18 |
+|  clk22_BUFG                | p/r10_reg[8][0]                                        | rst_IBUF                      |                4 |             18 |
+|  clk22_BUFG                | p/r5_reg[8]_0[0]                                       | rst_IBUF                      |                7 |             18 |
+|  clk22_BUFG                | p/r2_reg[8]_0[0]                                       | rst_IBUF                      |                6 |             18 |
+|  clk22_BUFG                | p/r3_reg[8]_0[0]                                       | rst_IBUF                      |                5 |             18 |
+|  btSpeedGen/PWM            |                                                        | rst_IBUF                      |                4 |             18 |
+|  clk22_BUFG                | p/r8_reg[8]_0[0]                                       | rst_IBUF                      |                5 |             18 |
+|  clk22_BUFG                | p/r9_reg[8]_0[0]                                       | rst_IBUF                      |                6 |             18 |
+|  clk22_BUFG                |                                                        | monster_c/pos_y[9]_i_1__1_n_0 |                3 |             20 |
+|  clk22_BUFG                | bullet_c/pos_x[9]_i_1_n_0                              |                               |                5 |             20 |
+|  clk22_BUFG                | bullet_c/pos_y[9]_i_1__0_n_0                           |                               |                7 |             20 |
+|  clk22_BUFG                | monster_c/pos_x[9]_i_1__0_n_0                          |                               |                7 |             20 |
+|  clk22_BUFG                |                                                        | rst_IBUF                      |                9 |             20 |
+|  clk22_BUFG                |                                                        | move_c/SR[0]                  |                5 |             20 |
+|  clk_IBUF_BUFG             | key_decoder/op/signal_single_pulse                     | rst_IBUF                      |                4 |             20 |
+|  clk_IBUF_BUFG             | key_decoder/key                                        | rst_IBUF                      |                4 |             20 |
+|  clk_IBUF_BUFG             | key_decoder/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | rst_IBUF                      |                6 |             22 |
+|  clk_25MHz_BUFG            |                                                        | vga_inst/pixel_cnt[9]_i_1_n_0 |                6 |             24 |
+|  clk22_BUFG                | monster_c/mon_alive_reg_n_0                            | p/sh_y10_reg[0]_0             |                4 |             28 |
+|  clk_25MHz_BUFG            | vga_inst/line_cnt[9]_i_2_n_0                           | vga_inst/line_cnt[9]_i_1_n_0  |                9 |             54 |
+|  clk_25MHz_BUFG            |                                                        |                               |               15 |             56 |
+|  clk_IBUF_BUFG             |                                                        |                               |                8 |             58 |
+|  clk23_BUFG                |                                                        | LED_cnt[3]_i_1_n_0            |               17 |             70 |
+|  clk22_BUFG                |                                                        | p/sh_y10_reg[0]_0             |               36 |            210 |
+|  clk_IBUF_BUFG             |                                                        | rst_IBUF                      |               52 |            288 |
++----------------------------+--------------------------------------------------------+-------------------------------+------------------+----------------+
+
+
